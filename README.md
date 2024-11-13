@@ -29,13 +29,17 @@ cmake --build .
 ## 使用方法
 
 cpp
+
 // 创建服务器实例
 FileServer server("./storage");
+
 // 添加用户
 server.addUser("admin", "password");
+
 // 上传文件
 std::vector<char> data = {'H', 'e', 'l', 'l', 'o'};
 server.uploadFile("test.txt", data);
+
 // 下载文件
 auto content = server.downloadFile("test.txt");
 
